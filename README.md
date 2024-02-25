@@ -242,6 +242,13 @@ yarn add @nestjs/typeorm typeorm pg
   - ![26.png](assets/26.png)
   - ![27.png](assets/27.png)
 
+#### Middleware
+
+- NestJS에서 맨 처음 1번 실행
+- 써드파티 연동, 요청 시간 로그 등에 사용
+  - ![31.png](assets/31.png)
+  - ![32.png](assets/32.png)
+
 ***
 
 ### 기타
