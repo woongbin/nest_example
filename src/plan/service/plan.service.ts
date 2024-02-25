@@ -5,7 +5,7 @@ import { PlanRepository } from '../repository/plan.repository';
 export class PlanService {
   constructor(private readonly planRepository: PlanRepository) {}
 
-  async store(name: string) {
-    return this.planRepository.store(name);
+  async store(name: string, lessonSeconds: number) {
+    return this.planRepository.store(name, lessonSeconds);
   }
 }

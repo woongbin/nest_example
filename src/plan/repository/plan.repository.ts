@@ -11,9 +11,10 @@ export class PlanRepository {
     private readonly repository: Repository<PlanEntity>,
   ) {}
 
-  async store(name: string) {
+  async store(name: string, lessonSeconds: number) {
     const plan = this.repository.create({
       name,
+      lessonSeconds,
     });
 
     plan.id = ulid();

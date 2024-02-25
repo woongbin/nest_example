@@ -255,3 +255,13 @@ yarn add @nestjs/typeorm typeorm pg
 - 설정
   - ![19.png](assets/19.png)
   - ![20.png](assets/20.png)
+
+#### Class Validator
+
+> yarn add class-validator class-transformer
+
+![28.png](assets/28.png)
+
+![29.png](assets/29.png)
+
+![30.png](assets/30.png)

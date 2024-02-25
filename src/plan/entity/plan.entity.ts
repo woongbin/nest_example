@@ -14,6 +14,9 @@ export class PlanEntity {
   @Column()
   name: string;
 
+  @Column({ name: 'lesson_seconds' })
+  lessonSeconds: number;
+
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;
 
