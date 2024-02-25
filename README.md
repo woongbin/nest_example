@@ -194,6 +194,10 @@ yarn add @nestjs/typeorm typeorm pg
 - relation을 지정할 때 무조건 반대편 모델에도 relatation을 추가하지 않고 반대편에서도 이 모델을 알아야 되는지 생각해보고 추가
 - ![06.png](assets/06.png)
 
+***
+
+![11.png](assets/11.png)
+
 #### Pipe
 
 ##### 용도
@@ -208,3 +212,11 @@ yarn add @nestjs/typeorm typeorm pg
 
 - 기본값 정의
   - ![10.png](assets/10.png)
+
+#### Guard
+
+- 요청 처리 권한 확인
+  - ![12.png](assets/12.png)
+  - ![13.png](assets/13.png)
+- request 객체에 데이터 전달
+  - ![14.png](assets/14.png)

@@ -6,17 +6,16 @@ import {
   Param,
   ParseIntPipe,
   Post,
+  Request,
+  UseGuards,
 } from '@nestjs/common';
 import { LessonService } from '../service/lesson.service';
 import { LessonTypeEnum } from '../enum/lesson-type.enum';
-import { UserService } from '../../user/service/user.service';
+import { AuthGuard } from '../../user/guard/auth-guard.service';
 
 @Controller('lessons')
 export class LessonController {
-  constructor(
-    private readonly lessonService: LessonService,
-    private readonly userService: UserService,
-  ) {}
+  constructor(private readonly lessonService: LessonService) {}
 
   @Get('/:id')
   async getLesson(@Param('id', ParseIntPipe) id: number) {
@@ -24,12 +23,13 @@ export class LessonController {
   }
 
   @Post()
+  @UseGuards(AuthGuard)
   async store(
-    @Body('userId') userId: string,
+    @Request() request,
     @Body('lessonType', new DefaultValuePipe(LessonTypeEnum.AUDIO))
     lessonType: LessonTypeEnum,
   ) {
-    const user = await this.userService.getUser(userId);
+    const user = request.user;
 
     return this.lessonService.store(user, lessonType);
   }
