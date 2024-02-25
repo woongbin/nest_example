@@ -176,17 +176,14 @@ yarn add @nestjs/typeorm typeorm pg
   - 비즈니스 규칙에 맞지 않을 경우 exception으로 처리
 - DB 처리가 필요한 로직은 `Repository`에 요청
 - TypeORM의 Repository를 바로 주입 받지 않고 직접 생성한 Repository를 DI 받는다
-
-![04.png](assets/04.png)
+- ![04.png](assets/04.png)
 
 #### Repository
 
 - 모든 DB의 CRUD를 담당
 - TypeORM이나 Supabase 등 상황에 따라서 사용할 기술의 DI를 받는다
-
-![03.png](assets/03.png)
-
-![05.png](assets/05.png)
+- ![03.png](assets/03.png)
+- ![05.png](assets/05.png)
 
 #### Entity
 
@@ -195,8 +192,7 @@ yarn add @nestjs/typeorm typeorm pg
   - 프로퍼티는 Camel case
 - 지정된 값의 목록이 있을 경우 enum을 활용
 - relation을 지정할 때 무조건 반대편 모델에도 relatation을 추가하지 않고 반대편에서도 이 모델을 알아야 되는지 생각해보고 추가
-
-![06.png](assets/06.png)
+- ![06.png](assets/06.png)
 
 #### Pipe
 
