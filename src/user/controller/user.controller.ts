@@ -7,6 +7,6 @@ export class UserController {
 
   @Get()
   index() {
-    console.log(process.env['DB_PORT']);
+    return this.userService.getUsers();
   }
 }
