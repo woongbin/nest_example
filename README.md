@@ -236,6 +236,12 @@ yarn add @nestjs/typeorm typeorm pg
     - ![24.png](assets/24.png)
     - ![25.png](assets/25.png)
 
+#### Exception filter
+
+- 전역에서 발생하는 Exception을 처리
+  - ![26.png](assets/26.png)
+  - ![27.png](assets/27.png)
+
 ***
 
 ### 기타
