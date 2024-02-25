@@ -1,4 +1,12 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  DefaultValuePipe,
+  Get,
+  Param,
+  ParseIntPipe,
+  Post,
+} from '@nestjs/common';
 import { LessonService } from '../service/lesson.service';
 import { LessonTypeEnum } from '../enum/lesson-type.enum';
 import { UserService } from '../../user/service/user.service';
@@ -10,10 +18,16 @@ export class LessonController {
     private readonly userService: UserService,
   ) {}
 
+  @Get('/:id')
+  async getLesson(@Param('id', ParseIntPipe) id: number) {
+    return await this.lessonService.getLesson(id);
+  }
+
   @Post()
   async store(
     @Body('userId') userId: string,
-    @Body('lessonType') lessonType: LessonTypeEnum,
+    @Body('lessonType', new DefaultValuePipe(LessonTypeEnum.AUDIO))
+    lessonType: LessonTypeEnum,
   ) {
     const user = await this.userService.getUser(userId);
 

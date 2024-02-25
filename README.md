@@ -197,3 +197,18 @@ yarn add @nestjs/typeorm typeorm pg
 - relation을 지정할 때 무조건 반대편 모델에도 relatation을 추가하지 않고 반대편에서도 이 모델을 알아야 되는지 생각해보고 추가
 
 ![06.png](assets/06.png)
+
+#### Pipe
+
+##### 용도
+
+- Validation
+  - ![08.png](assets/08.png)
+  - ![09.png](assets/09.png)
+
+- 파라미터 형변환
+  - `ParseIntPipe`, `ParseBoolPipe`, .....
+  - ![07.png](assets/07.png)
+
+- 기본값 정의
+  - ![10.png](assets/10.png)

@@ -10,4 +10,8 @@ export class LessonService {
   async store(user: UserEntity, lessonType: LessonTypeEnum) {
     return this.lessonRepository.store(user, lessonType);
   }
+
+  async getLesson(id: number) {
+    return await this.lessonRepository.getLesson(id);
+  }
 }

@@ -18,4 +18,10 @@ export class LessonRepository {
       type: lessonType,
     });
   }
+
+  async getLesson(id: number) {
+    return await this.repository.findOne({
+      where: { id },
+    });
+  }
 }
