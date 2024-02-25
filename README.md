@@ -200,8 +200,6 @@ yarn add @nestjs/typeorm typeorm pg
 
 #### Pipe
 
-##### 용도
-
 - Validation
   - ![08.png](assets/08.png)
   - ![09.png](assets/09.png)
@@ -220,3 +218,23 @@ yarn add @nestjs/typeorm typeorm pg
   - ![13.png](assets/13.png)
 - request 객체에 데이터 전달
   - ![14.png](assets/14.png)
+
+#### Decorator
+
+- 특정 값을 받아올 때
+  - ![16.png](assets/16.png)
+  - ![15.png](assets/15.png)
+
+***
+
+### 기타
+
+#### ULID 사용
+
+- UUID
+  - ![17.png](assets/17.png)
+- ULID
+  - ![18.png](assets/18.png)
+- 설정
+  - ![19.png](assets/19.png)
+  - ![20.png](assets/20.png)
