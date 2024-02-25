@@ -122,11 +122,16 @@ $ yarn run test:cov
 - 입력 유효성 검사
     - ex) 수업을 시작할 때 진행하려고 하는 수업의 종류를 전달 했는지 여부
 - **간단한 조회라도 `Service`에 요청해서 처리**
+- REST API를 규칙을 준수하도록 최대한 노력해서 URI 작성
+  - 자원에 해당하는 URI를 복수로 작성
+    - `HOST/users`
+  - HTTP Method를 준수(GET, POST, PATCH, DELETE)
 
 #### Service
 
 - 비즈니스 유효성 검사
     - ex) 수업을 시작할 때 유효한 수강권이 있는지 확인
+    - 비즈니스 규칙에 맞지 않을 경우 exception으로 처리
 - DB 처리가 필요한 로직은 `Repository`에 요청
 - TypeORM의 Repository를 바로 주입 받지 않고 직접 생성한 Repository를 DI 받는다
 
@@ -134,3 +139,20 @@ $ yarn run test:cov
 
 - 모든 DB의 CRUD를 담당
 - TypeORM이나 Supabase 등 상황에 따라서 사용할 기술의 DI를 받는다
+
+### 환경 변수 관리
+
+#### 패키지 설치
+ 
+```shell
+yarn add @nestjs/config
+```
+
+- .env 파일에 작성해서 관리
+- .env.example에 필요한 환경변수 등록해서 관리
+
+#### 사용법
+
+```typescript
+process.env[ENV_KEY]
+```
