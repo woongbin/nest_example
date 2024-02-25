@@ -225,6 +225,17 @@ yarn add @nestjs/typeorm typeorm pg
   - ![16.png](assets/16.png)
   - ![15.png](assets/15.png)
 
+#### Interceptor
+
+- AOP 구현
+  - 전역 Logging
+    - ![21.png](assets/21.png)
+    - ![22.png](assets/22.png)
+    - ![23.png](assets/23.png)
+  - Transaction
+    - ![24.png](assets/24.png)
+    - ![25.png](assets/25.png)
+
 ***
 
 ### 기타
