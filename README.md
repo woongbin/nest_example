@@ -193,5 +193,7 @@ yarn add @nestjs/typeorm typeorm pg
 - **테이블 이름은 복수로 설정**
 - **컬럼 이름은 Snake case로 설정**
   - 프로퍼티는 Camel case
+- 지정된 값의 목록이 있을 경우 enum을 활용
+- relation을 지정할 때 무조건 반대편 모델에도 relatation을 추가하지 않고 반대편에서도 이 모델을 알아야 되는지 생각해보고 추가
 
 ![06.png](assets/06.png)

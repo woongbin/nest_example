@@ -10,7 +10,22 @@ export class UserRepository {
     private readonly repository: Repository<UserEntity>,
   ) {}
 
-  getUsers() {
-    return this.repository.find();
+  async getUsers() {
+    return await this.repository.find();
+  }
+
+  async store(name: string, phoneNumber: string) {
+    return await this.repository.save({
+      name,
+      phoneNumber,
+    });
+  }
+
+  async getUser(userId: string) {
+    return await this.repository.findOne({
+      where: {
+        id: userId,
+      },
+    });
   }
 }
