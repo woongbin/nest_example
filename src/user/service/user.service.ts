@@ -6,14 +6,14 @@ export class UserService {
   constructor(private readonly userRepository: UserRepository) {}
 
   async getUser(userId: string) {
-    return this.userRepository.getUser(userId);
+    return await this.userRepository.getUser(userId);
   }
 
   async getUsers() {
-    return this.userRepository.getUsers();
+    return await this.userRepository.getUsers();
   }
 
   async store(name: string, phoneNumber: string) {
-    return this.userRepository.store(name, phoneNumber);
+    return await this.userRepository.store(name, phoneNumber);
   }
 }

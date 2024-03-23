@@ -251,6 +251,25 @@ yarn add @nestjs/typeorm typeorm pg
 
 ***
 
+### Test
+
+#### Test file
+
+- 경로
+  - `root/test` 폴더 하위에 테스트의 종류에 따라서 구분
+    - `unit` : Unit Test
+    - `integration` : Integration Test
+- 파일 이름
+  - Unit
+    - `'테스트 하려는 파일의 클래스 이름'.test.ts`
+      - UserService의 테스트 파일 -> user-service.test.ts
+      - UserRepository의 테스트 파일 -> user-repository.test.ts
+  - Integration
+    - `'테스트 하려는 컨트롤러의 클래스 이름'.int.test.ts`
+      - UserController의 테스트 파일 -> user-controller.int.test.ts
+
+***
+
 ### 기타
 
 #### ULID 사용
@@ -272,3 +291,4 @@ yarn add @nestjs/typeorm typeorm pg
 ![29.png](assets/29.png)
 
 ![30.png](assets/30.png)
+
